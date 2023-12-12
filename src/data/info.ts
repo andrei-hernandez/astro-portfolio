@@ -1,52 +1,62 @@
 export const info = {
-  baseUrl: "https://astro-portfolio-uzair.vercel.app",
-  name: "Uzair Ahmed",
-  jobDescription: "Web Developer",
-  about: `I'm a software engineer based in Karachi, Pakistan.
+  baseUrl: "https://portfolio-tawny-iota.vercel.app",
+  name: "Andrei Hernandez",
+  jobDescription: "Frontend Developer",
+  about: `I'm a software engineer based in Mexico.
    I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
    I have been working for 3 year, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
    I have 3 years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
    I have successfully completed several web projects from scratch. 
    Yet, I learn continuously and never stop exploring new technologies.
-   So, I have also gained knowledge of Node JS, Express JS, Mongo DB, Python,
+   So, I have also gained knowledge of Node JS, Nest JS, Express JS, Mongo DB,
    firebase and React Native with time.
   `,
 
   experience: [
     {
-      name: "InterNative Labs, LLC",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "Apr 2022",
+      name: "Software Engineer",
+      location: "Contrast Security",
+      startDate: "Feb 2023",
+      endDate: "Sep 2023",
+      description: [
+        "- Improved developing time and workflows working on MFE's across the product.",
+        "- Contributing to frontend architecture, translations, and accessibility",
+        "- Relevant skills: ReactJS, GraphQL, React, Query, Webpack Module Federation, Playwright"
+      ],
+    },
+    {
+      name: "Testing Engineer",
+      location: "IWA Consolti",
+      startDate: "Nov 2022",
+      endDate: "Sep 2023",
+      description: [
+        "- Improved CI & CD workflows.",
+        "- Improved testing on the UI.",
+        "- Contributing to the code standards and technical documentation.",
+        "- Relevant skills: ReactJS, Playwright, Jest, Testing Library",
+      ],
+    },
+    {
+      name: "Fullstack Developer",
+      location: "Jaxi Tank",
+      startDate: "Aug 2021",
+      endDate: "Nov 2022",
+      description: [
+        "- Contributing to multiple projects in different areas of the industry",
+        "- Leading developing teams approaching the developers to the best performance and working culture",
+        "- Contributing to the code standards and technical documentation",
+        "- Relevant Skills: ReactJS, NextJS, Apollo GraphQL, NodeJS, TypeORM, AntDesign, Firebase, AWS"
+      ],
+    },
+    {
+      name: "Software Engineer & Frontend Architect",
+      location: "Devany",
+      startDate: "May 2020",
       endDate: "Present",
       description: [
-        "- Developing screens and UI components for the web application using React and Tailwind.",
-        "- Fixing UI issues and integrating backend APIs with Redux Saga.",
-      ],
-    },
-
-    {
-      name: "Coupon Approve (Remote)",
-      location: "Amsterdam, North Holland, Netherlands",
-      startDate: "Nov 2020",
-      endDate: "Apr 2022",
-      description: [
-        "✓ Developing code in accordance with appropriate design and architectural rules",
-        "✓ Documenting, testing, deployment, maintenance, support of platforms, applications, databases and solutions",
-        "✓ Help and training of other colleagues",
-        "✓ Others tasks connected to the nature of the job",
-        "✓ Code Improvements and Refactoring ",
-        "✓ Best Practices and Rules Maintainer",
-      ],
-    },
-
-    {
-      name: "Interns Pakistan",
-      location: "Pakistan",
-      startDate: "Oct 2020",
-      endDate: "Nov 2020",
-      description: [
-        "An Immersive Internship Program that prepares me for the world's most in-demand career. A six weeks program completely based on learning and challenges.",
-        "The internship track is built by an industry expert that let develop the skills in the areas most important ",
+        "- Approaching the software to the best quality, performance, usability, reliability, and scalability",
+        "- Applying and continues improving CI & CD workflows",
+        "- Relevant Skills: ReactJS, NestJS, Selte, SvelteKit, IonicJS, GraphQL, NestJS, Prisma, Firebase, AntDesign, Tailwind, Vue, NuxtJS, Jest, Testing, Library"
       ],
     },
   ],
@@ -77,21 +87,19 @@ export const info = {
     },
   ],
 
-  socialMedia: {
-    facebook: "https://www.facebook.com/profile.php?id=100022899849583",
-    twitter: "https://twitter.com/Uzzii_21",
-    github: "https://github.com/uzzii-21",
-    email: "mailto:uzairahmed@74372gmail.com",
-    linkedin: "https://www.linkedin.com/in/uzzii21/",
+  socialMedia: {        
+    github: "https://github.com/andrei-hernandez",
+    email: "mailto:andrei.acevedo1@gmail.com",
+    linkedin: "https://www.linkedin.com/in/andrei-hernandez/",
   },
 
   projects: [
     {
-      title: "Astro Portfolio",
+      title: "Next JS Dashboard",
       isFeatured: true,
-      thumbnail: "/assets/images/astro-portfolio.png",
-      githubUrl: "https://github.com/uzzii-21/astro-portfolio",
-      liveUrl: "https://astro-portfolio-uzair.vercel.app/",
+      thumbnail: "/assets/images/nexjs-dashboard.png",
+      githubUrl: "https://github.com/andrei-hernandez/nexjs-dashboard",
+      liveUrl: "https://nexjs-dashboard-pink.vercel.app/",
     },
   ],
 };
