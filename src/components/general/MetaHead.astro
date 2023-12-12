@@ -1,6 +1,7 @@
 ---
 import { IMetaHead } from "@types";
 import { info } from "@data";
+import { ViewTransitions } from 'astro:transitions';
 
 const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 ---
@@ -17,7 +18,7 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
 <meta name="msapplication-TileColor" content="#da532c" />
-<meta name="theme-color" content="#ffffff" />
+<meta name="theme-color" content="#111111" />
 
 <meta name="generator" content={Astro.generator} />
 
@@ -77,3 +78,5 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
   as="font"
   crossorigin
 />
+
+<ViewTransitions />
