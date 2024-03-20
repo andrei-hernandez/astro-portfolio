@@ -1,0 +1,50 @@
+---
+import { info, techIcons } from "@data";
+
+import type { GetStaticPaths } from "astro";
+import MetaHead from "@components/general/MetaHead.astro";
+import Layout from "@layouts/Layout.astro";
+import ProjectCard from "@components/general/ProjectCard.astro";
+const { id } = Astro.params;
+
+const project = info.projects.find((project) => Number(id) === project.id);
+
+export const getStaticPaths = (() => {
+  return info.projects.map((project) => {
+    return {
+      params: {
+        id: project.id,
+      },
+    };
+  });
+}) satisfies GetStaticPaths;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <MetaHead
+      title={project?.title}
+      description={"All projects are available in this page."}
+    />
+  </head>
+
+  <body>
+    <Layout>
+      <h1 class="main-heading" style="line-height: 1.2;">{project.title}</h1>
+      <section
+        class="flex items-left justify-between flex-col dark:text-light"
+      >
+      <ProjectCard projectDetail={project}/>
+      <p class="dark:text-light text-lg mb-16 mt-12">
+        {project.description}
+      </p>
+      <div class="flex items-start justify-between flex-row w-10 h-10">
+        {project.techStack.map((tech) => (
+          <img class="object-contain h-[40px] w-[40px] mx-1" src={techIcons[tech]} />
+        ))
+      </div>
+      </section>
+    </Layout>
+  </body>
+</html>

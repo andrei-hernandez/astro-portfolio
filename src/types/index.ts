@@ -22,11 +22,15 @@ export interface IExperiences {
 }
 
 export interface IProject {
+  id: number;
   title: string;
   isFeatured: boolean;
   thumbnail: string;
   githubUrl: string;
   liveUrl: string;
+  techStack: string[];
+  description: string;
+  hasProjectDetails: boolean
 }
 export interface IProjects {
   projects: IProject[];

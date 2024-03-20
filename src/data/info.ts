@@ -95,11 +95,35 @@ export const info = {
 
   projects: [
     {
+      id: 1,
       title: "Next JS Dashboard",
       isFeatured: true,
       thumbnail: "/assets/images/nexjs-dashboard.png",
       githubUrl: "https://github.com/andrei-hernandez/nexjs-dashboard",
       liveUrl: "https://nexjs-dashboard-pink.vercel.app/",
+      techStack: ["NextJS", "TypeScript", "Vercel", "Tailwind"],
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima itaque architecto beatae dolorum illo eligendi nobis id quae necessitatibus quidem aspernatur delectus magni neque fugit reprehenderit consequatur culpa, eum fugiat, similique modi molestiae. Ex sapiente quo earum ratione autem omnis laborum assumenda, dolor minima deleniti provident repellendus officia veritatis corporis minus necessitatibus nihil. Expedita laboriosam cum eligendi consectetur saepe facere nam corrupti eius praesentium, animi qui eum nostrum amet et iure culpa tempore reprehenderit! Excepturi vitae omnis nam quibusdam sit voluptatibus perferendis corrupti voluptates, officiis officia, debitis quidem non dolorum neque aliquid consectetur accusantium. Odit reiciendis quae id! Vero, soluta!",
+      hasProjectDetails: false,
     },
+    {
+      id: 2,
+      title: "NextJS Indexed Search",
+      isFeatured: true,
+      thumbnail: "/assets/images/indexed-search-options.png",
+      githubUrl: "https://github.com/andrei-hernandez/seach-app",
+      liveUrl: "https://seach-app.vercel.app/",
+      techStack: ["NextJS,", "TypeScript", "Firebase", "Algolia", "Vercel", "Tailwind"],
+      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima itaque architecto beatae dolorum illo eligendi nobis id quae necessitatibus quidem aspernatur delectus magni neque fugit reprehenderit consequatur culpa, eum fugiat, similique modi molestiae. Ex sapiente quo earum ratione autem omnis laborum assumenda, dolor minima deleniti provident repellendus officia veritatis corporis minus necessitatibus nihil. Expedita laboriosam cum eligendi consectetur saepe facere nam corrupti eius praesentium, animi qui eum nostrum amet et iure culpa tempore reprehenderit! Excepturi vitae omnis nam quibusdam sit voluptatibus perferendis corrupti voluptates, officiis officia, debitis quidem non dolorum neque aliquid consectetur accusantium. Odit reiciendis quae id! Vero, soluta!",
+      hasProjectDetails: false,
+    }
   ],
 };
+
+export const techIcons = {
+  "NextJS": "https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png",
+  "TypeScript": "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+  "Vercel": "https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png",
+  "Tailwind": "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
+  "Algolia": "https://static-00.iconduck.com/assets.00/algolia-icon-256x256-ltt433y8.png",
+  "Firebase": "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-yunpm6or.png"
+}
