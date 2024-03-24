@@ -1,10 +1,20 @@
 ---
 import { IProjectDetails } from "@types";
 import { Image } from "astro:assets";
-const { projectDetail } = Astro.props as IProjectDetails;
-const { id, title, thumbnail, liveUrl, githubUrl, hasProjectDetails } = projectDetail;
 
-const anchorAttributes = hasProjectDetails ? { href: `/projects/${id}` } 
+
+const { projectDetail } = Astro.props as IProjectDetails;
+const { pathname } = Astro.url
+const { 
+  id,
+  title,
+  thumbnail,
+  liveUrl,
+  githubUrl,
+  hasProjectDetails
+} = projectDetail;
+const anchorAttributes = (hasProjectDetails &&  pathname === "/") 
+? { href: `/projects/${id}` } 
 : { href: liveUrl || githubUrl, target: "_blank" };
 ---
 
