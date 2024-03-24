@@ -4,8 +4,8 @@ export const info = {
   jobDescription: "Frontend Developer",
   about: `I'm a software engineer based in Mexico.
    I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
-   I have been working for 3 year, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
-   I have 3 years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
+   I have been working for 4 years, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
+   I have  years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
    I have successfully completed several web projects from scratch. 
    Yet, I learn continuously and never stop exploring new technologies.
    So, I have also gained knowledge of Node JS, Nest JS, Express JS, Mongo DB,
@@ -112,18 +112,37 @@ export const info = {
       thumbnail: "/assets/images/indexed-search-options.png",
       githubUrl: "https://github.com/andrei-hernandez/seach-app",
       liveUrl: "https://seach-app.vercel.app/",
-      techStack: ["NextJS,", "TypeScript", "Firebase", "Algolia", "Vercel", "Tailwind"],
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima itaque architecto beatae dolorum illo eligendi nobis id quae necessitatibus quidem aspernatur delectus magni neque fugit reprehenderit consequatur culpa, eum fugiat, similique modi molestiae. Ex sapiente quo earum ratione autem omnis laborum assumenda, dolor minima deleniti provident repellendus officia veritatis corporis minus necessitatibus nihil. Expedita laboriosam cum eligendi consectetur saepe facere nam corrupti eius praesentium, animi qui eum nostrum amet et iure culpa tempore reprehenderit! Excepturi vitae omnis nam quibusdam sit voluptatibus perferendis corrupti voluptates, officiis officia, debitis quidem non dolorum neque aliquid consectetur accusantium. Odit reiciendis quae id! Vero, soluta!",
-      hasProjectDetails: false,
+      techStack: ["NextJS", "TypeScript", "Firebase", "Algolia", "Vercel", "Tailwind"],
+      description: "NextJS Indexed Search is a curated compilation of practical examples demonstrating various indexed search technologies. It currently features an Algolia example, showcasing its lightning-fast search capabilities and user-friendly APIs. In the pipeline, you’ll find upcoming additions like OpenSearch (an open-source, self-hosted search engine built on Elasticsearch) and Elasticsearch itself. These examples highlight the precision, scalability, customization, and performance benefits of indexed search engines. As you expand this project, consider exploring hybrid solutions and integrating machine learning for smarter search results.",
+      hasProjectDetails: true,
     }
   ],
 };
 
 export const techIcons = {
-  "NextJS": "https://static-00.iconduck.com/assets.00/next-js-icon-2048x2048-5dqjgeku.png",
-  "TypeScript": "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
-  "Vercel": "https://static-00.iconduck.com/assets.00/vercel-icon-512x449-3422jidz.png",
-  "Tailwind": "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
-  "Algolia": "https://static-00.iconduck.com/assets.00/algolia-icon-256x256-ltt433y8.png",
-  "Firebase": "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-yunpm6or.png"
-}
+  NextJS: {
+    icon: "https://nextjs.org/favicon.ico",
+    url: "https://nextjs.org/",
+  },
+  TypeScript: {
+    icon: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+    url: "https://www.typescriptlang.org/",
+  },
+  Vercel: {
+    icon: "/assets/images/vercel-icon.ico",
+    url: "https://vercel.com/",
+  },
+  Tailwind: {
+    icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
+    url: "https://tailwindcss.com/",
+  },
+  Algolia: {
+    icon: "https://static-00.iconduck.com/assets.00/algolia-icon-256x256-ltt433y8.png",
+    url: "https://www.algolia.com/",
+  },
+  Firebase: {
+    icon: "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-yunpm6or.png",
+    url: "https://firebase.google.com/",
+  },
+};
+

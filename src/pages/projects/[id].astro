@@ -13,10 +13,10 @@ export const getStaticPaths = (() => {
   return info.projects.map((project) => {
     return {
       params: {
-        id: project.id,
-      },
-    };
-  });
+        id: project.id
+      }
+    }
+  })
 }) satisfies GetStaticPaths;
 ---
 
@@ -39,9 +39,12 @@ export const getStaticPaths = (() => {
       <p class="dark:text-light text-lg mb-16 mt-12">
         {project.description}
       </p>
-      <div class="flex items-start justify-between flex-row w-10 h-10">
-        {project.techStack.map((tech) => (
-          <img class="object-contain h-[40px] w-[40px] mx-1" src={techIcons[tech]} />
+      <h2 class="mb-2">Tech Stack</h2>
+      <div class="flex items-start flex-row w-auto h-10 gap-1">        
+        {project.techStack.map((tech) => (          
+          <a href={techIcons[tech].url} target="_blank">
+            <img class="fill-white object-contain h-[40px] w-[40px] mx-1 logo" src={techIcons[tech].icon} />
+          </a>          
         ))
       </div>
       </section>
