@@ -1,5 +1,6 @@
 ---
 import { IProjectDetails } from "@types";
+import { Image } from "astro:assets";
 const { projectDetail } = Astro.props as IProjectDetails;
 const { id, title, thumbnail, liveUrl, githubUrl, hasProjectDetails } = projectDetail;
 
@@ -63,13 +64,15 @@ const anchorAttributes = hasProjectDetails ? { href: `/projects/${id}` }
     }
   </div>
   <a { ...anchorAttributes }>
-    <img
-    src={thumbnail}
-    class="w-full h-auto aspect-video scale-100 hover:scale-110 transition duration-[1.5s] object-cover"
-    loading="lazy"
-    width="100%"
-    alt="featureImage"
-  />
+    <Image
+      src={thumbnail}
+      class="w-full h-auto aspect-video scale-100 hover:scale-110 transition duration-[1.5s] object-cover"      
+      height={300}
+      loading="eager"
+      width={400}      
+      alt="featureImage"            
+      title={title}
+    />  
   </a>
   <div
     class="absolute w-full bottom-0 left-0 backdrop-blur-md dark:text-white text-white bg-black/50 p-4 translate-y-[100%] group-hover:translate-y-0 transition duration-700"

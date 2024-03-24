@@ -5,6 +5,7 @@ import type { GetStaticPaths } from "astro";
 import MetaHead from "@components/general/MetaHead.astro";
 import Layout from "@layouts/Layout.astro";
 import ProjectCard from "@components/general/ProjectCard.astro";
+import { Image } from "astro:assets";
 const { id } = Astro.params;
 
 const project = info.projects.find((project) => Number(id) === project.id);
@@ -20,7 +21,7 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
   <head>
     <MetaHead
@@ -31,10 +32,10 @@ export const getStaticPaths = (() => {
 
   <body>
     <Layout>
-      <h1 class="main-heading" style="line-height: 1.2;">{project.title}</h1>
-      <section
-        class="flex items-left justify-between flex-col dark:text-light"
-      >
+      <h1 class="text-[2rem] main-heading">
+        {project.title}
+      </h1>
+      <sectionc class="flex items-left justify-between flex-col dark:text-light">
       <ProjectCard projectDetail={project}/>
       <p class="dark:text-light text-lg mb-16 mt-12">
         {project.description}
@@ -42,8 +43,13 @@ export const getStaticPaths = (() => {
       <h2 class="mb-2">Tech Stack</h2>
       <div class="flex items-start flex-row w-auto h-10 gap-1 mb-16">        
         {project.techStack.map((tech) => (          
-          <a href={techIcons[tech].url} target="_blank">
-            <img class="fill-white object-contain h-[40px] w-[40px] mx-1 logo" src={techIcons[tech].icon} />
+          <a href={techIcons[tech].url} aria-label={tech} target="_blank">
+            <Image
+            alt={tech}
+            width={40}
+            height={40}
+            class="fill-white object-contain h-[40px] w-[40px] mx-1 logo" 
+            src={techIcons[tech].icon} />
           </a>          
         ))
       </div>
