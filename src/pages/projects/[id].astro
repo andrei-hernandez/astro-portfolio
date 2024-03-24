@@ -40,7 +40,7 @@ export const getStaticPaths = (() => {
         {project.description}
       </p>
       <h2 class="mb-2">Tech Stack</h2>
-      <div class="flex items-start flex-row w-auto h-10 gap-1">        
+      <div class="flex items-start flex-row w-auto h-10 gap-1 mb-16">        
         {project.techStack.map((tech) => (          
           <a href={techIcons[tech].url} target="_blank">
             <img class="fill-white object-contain h-[40px] w-[40px] mx-1 logo" src={techIcons[tech].icon} />
