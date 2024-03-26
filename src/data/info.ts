@@ -11,7 +11,180 @@ export const info = {
    So, I have also gained knowledge of Node JS, Nest JS, Express JS, Mongo DB,
    firebase and React Native with time.
   `,
-
+  techStack: {
+    frameworks: [
+      {
+        name: "ReactJS",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      },
+      {
+        name: "NextJS",
+        icon: "/assets/images/nextjs.svg",
+      },
+      {
+        name: "JavaScript",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+      },
+      {
+        name: "TypeScript",
+        icon: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+      },
+      {
+        name: "HTML5",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+      },
+      {
+        name: "NodeJS",
+        icon: "https://png2.cleanpng.com/sh/f559b489de4345e6fa7a0951ec21ecb1/L0KzQYm3VMI2N5d1j5H0aYP2gLBuTf5wbJYyguU2anH5ccTqkvlxfF58fdQ2YYDzfLrqggRqd58yfep5cnX2g37xk71kd551RadqZUDpSIXsVfU4PWQ8RqI9NkS8RIaBUcUzPGcAS6ICMEO7Roq1kP5o/kisspng-node-js-javascript-web-application-express-js-comp-5ae0f84e5e7537.0464945815246930703869.png",
+      },
+      {
+        name: "NestJS",
+        icon: "https://cdn.worldvectorlogo.com/logos/nestjs.svg",
+      },
+      {
+        name: "React Native",
+        icon: "https://reactnative.dev/img/favicon.ico",
+      },
+      {
+        name: "Svelte/SvelteKit",
+        icon: "https://svelte.dev/favicon.png",
+      },
+      {
+        name: "Vue",
+        icon: "https://vuejs.org/logo.svg",
+      },
+      {
+        name: "NuxtJS",
+        icon: "https://nuxt.com/icon.png",
+      },
+      {
+        name: "IonicJS",
+        icon: "https://static-00.iconduck.com/assets.00/ionic-icon-512x512-6wc44jjr.png",
+      },
+      {
+        name: "Astro",
+        icon: "https://astro.build/assets/press/astro-icon-light-gradient.svg"
+      },
+    ],
+    css: [
+      {
+        name: "CSS3",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+      },
+      {
+        name: "SASS",
+        icon: "https://sass-lang.com/assets/img/logos/logo.svg",
+      },
+      {
+        name: "Bootstrap",
+        icon: "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-social-logo.png",
+      },
+      {
+        name: "AntDesign",
+        icon: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      },
+      {
+        name: "Styled Components",
+        icon: "https://styled-components.com/logo.png",
+      },
+      {
+        name: "Tailwind",
+        icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
+      }
+    ],
+    other: [
+      {
+        name: "GraphQL",
+        icon: "https://graphql.org/img/logo.svg",
+      },
+      {
+        name: "Apollo GraphQL",
+        icon: "https://www.apollographql.com/assets/logos/apollo-symbol-regolith.svg",
+      },
+      {
+        name: "Tanstack Query",
+        icon: "https://seeklogo.com/images/R/react-query-logo-1340EA4CE9-seeklogo.com.png",
+      },
+      {
+        name: "Webpack Module Federation",
+        icon: "https://webpack.js.org/icon-square-small-slack.1c7f4f7a52c41f94.png",
+      },
+      {
+        name: "Prisma",
+        icon: "https://i.pinimg.com/originals/39/b2/e4/39b2e4ad77c23a2c11e5950a7dfa2aec.png",
+      },
+      {
+        name: "Docker",
+        icon: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+      }
+    ],
+    databases: [
+      {
+        name: "MongoDB",
+        icon: "https://www.svgrepo.com/show/331488/mongodb.svg",
+      },
+      {
+        name: "MySQL",
+        icon: "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+      },
+      {
+        name: "PostgreSQL",
+        icon: "https://www.postgresql.org/media/img/about/press/elephant.png",
+      },
+      {
+        name: "DynamoDB",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/DynamoDB.png/120px-DynamoDB.png",
+      },
+      {
+        name: "Firestore",
+        icon: "https://www.svgrepo.com/show/375433/firestore.svg",
+      },
+    ],
+    cloud: [
+      {
+        name: "AWS",
+        icon: "https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35.png",
+      },
+      {
+        name: "GCP",
+        icon: "https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png",
+      },
+      {
+        name: "Vercel",
+        icon: "/assets/images/vercel-icon.ico",
+      },
+      {
+        name: "DigitalOcean",
+        icon: "https://cdn.worldvectorlogo.com/logos/digitalocean-icon-1.svg",
+      },
+      {
+        name: "Firebase",
+        icon: "https://www.svgrepo.com/show/353735/firebase.svg",
+      },
+    ],
+    testing: [
+      {
+        name: "Jest",
+        icon: "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+      },
+      {
+        name: "Vitest",
+        icon: "https://vitejs.dev/logo.svg",
+      },
+      {
+        name: "Testing Library",
+        icon: "https://testing-library.com/img/logo-large.png",
+      },
+      {
+        name: "Playwright",
+        icon: "https://playwright.dev/img/playwright-logo.svg",
+      },
+      {
+        name: "Cypress",
+        icon: "https://www.svgrepo.com/show/353630/cypress.svg",
+      }
+    ],
+  },
   experience: [
     {
       name: "Software Engineer",
@@ -87,7 +260,7 @@ export const info = {
     },
   ],
 
-  socialMedia: {        
+  socialMedia: {
     github: "https://github.com/andrei-hernandez",
     email: "mailto:andrei.acevedo1@gmail.com",
     linkedin: "https://www.linkedin.com/in/andrei-hernandez/",
