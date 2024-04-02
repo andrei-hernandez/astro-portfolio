@@ -10,8 +10,12 @@
 
 /* ========== tailwind custom styles ========== */
 @layer components {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
   body {
-    @apply bg-light dark:bg-dark;
+    @apply bg-light dark:bg-dark;    
   }
   .container {
     @apply max-w-[1112px] mx-auto px-4;
@@ -34,5 +38,8 @@
   }
   .footer-icons {
     @apply dark:text-light flex items-center border border-dark dark:border-light p-4 rounded-lg justify-center;
+  }
+  .ring-gray-400\/20 { 
+    --tw-ring-color: rgb(156 163 175 / 0.2);
   }
 }

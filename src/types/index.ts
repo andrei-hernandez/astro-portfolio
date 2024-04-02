@@ -24,7 +24,7 @@ export interface IExperiences {
 export interface IProject {
   id: number;
   title: string;
-  isFeatured: boolean;
+  isFeatured: boolean;  
   thumbnail: string;
   githubUrl: string;
   liveUrl: string;
@@ -37,5 +37,6 @@ export interface IProjects {
 }
 
 export interface IProjectDetails {
+  className: string;
   projectDetail: IProject;
 }

@@ -274,8 +274,8 @@ export const info = {
       thumbnail: "/assets/images/nexjs-dashboard.png",
       githubUrl: "https://github.com/andrei-hernandez/nexjs-dashboard",
       liveUrl: "https://nexjs-dashboard-pink.vercel.app/",
-      techStack: ["NextJS", "TypeScript", "Vercel", "Tailwind"],
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima itaque architecto beatae dolorum illo eligendi nobis id quae necessitatibus quidem aspernatur delectus magni neque fugit reprehenderit consequatur culpa, eum fugiat, similique modi molestiae. Ex sapiente quo earum ratione autem omnis laborum assumenda, dolor minima deleniti provident repellendus officia veritatis corporis minus necessitatibus nihil. Expedita laboriosam cum eligendi consectetur saepe facere nam corrupti eius praesentium, animi qui eum nostrum amet et iure culpa tempore reprehenderit! Excepturi vitae omnis nam quibusdam sit voluptatibus perferendis corrupti voluptates, officiis officia, debitis quidem non dolorum neque aliquid consectetur accusantium. Odit reiciendis quae id! Vero, soluta!",
+      techStack: ["TypeScript", "NextJS", "Vercel", "Tailwind"],
+      description: "It's a demo application created by the Next.js team to showcase the latest features of Next.js 14. It serves as a practical reference for developers, demonstrating how to implement these new functionalities in real-world projects. The dashboard provides user authentication, customer management, invoice assignment, and a summary display. It's based on the official Next.js 14 tutorial and was created by Vercel. Developers can explore the code to gain insights into building similar applications using Next.js! ",
       hasProjectDetails: false,
     },
     {
@@ -285,8 +285,8 @@ export const info = {
       thumbnail: "/assets/images/indexed-search-options.png",
       githubUrl: "https://github.com/andrei-hernandez/seach-app",
       liveUrl: "https://seach-app.vercel.app/",
-      techStack: ["NextJS", "TypeScript", "Firebase", "Algolia", "Vercel", "Tailwind"],
-      description: "NextJS Indexed Search is a curated compilation of practical examples demonstrating various indexed search technologies. It currently features an Algolia example, showcasing its lightning-fast search capabilities and user-friendly APIs. In the pipeline, you’ll find upcoming additions like OpenSearch (an open-source, self-hosted search engine built on Elasticsearch) and Elasticsearch itself. These examples highlight the precision, scalability, customization, and performance benefits of indexed search engines. As you expand this project, consider exploring hybrid solutions and integrating machine learning for smarter search results.",
+      techStack: ["TypeScript", "NextJS", "Firebase", "Algolia", "Vercel", "Tailwind"],
+      description: "Its a compilation of practical examples demonstrating various indexed search technologies. It currently features an Algolia example, showcasing its lightning-fast search capabilities and user-friendly APIs. In the pipeline, you’ll find upcoming additions like OpenSearch (an open-source, self-hosted search engine built on Elasticsearch) and Elasticsearch itself. These examples highlight the precision, scalability, customization, and performance benefits of indexed search engines. As you expand this project, consider exploring hybrid solutions and integrating machine learning for smarter search results.",
       hasProjectDetails: true,
     }
   ],
@@ -296,6 +296,7 @@ export const techIcons = {
   NextJS: {
     icon: "https://nextjs.org/favicon.ico",
     url: "https://nextjs.org/",
+    color: "gray-400/20"
   },
   TypeScript: {
     icon: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
@@ -304,18 +305,22 @@ export const techIcons = {
   Vercel: {
     icon: "/assets/images/vercel-icon.ico",
     url: "https://vercel.com/",
+    color: "gray-400/20"
   },
   Tailwind: {
     icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
     url: "https://tailwindcss.com/",
+    color: "gray-400/20"
   },
   Algolia: {
     icon: "https://static-00.iconduck.com/assets.00/algolia-icon-256x256-ltt433y8.png",
     url: "https://www.algolia.com/",
+    color: "gray-400/20"
   },
   Firebase: {
     icon: "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-yunpm6or.png",
     url: "https://firebase.google.com/",
+    color: "gray-400/20"
   },
 };
 

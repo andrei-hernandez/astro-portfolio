@@ -1,0 +1,129 @@
+---
+import sendGrid, { MailDataRequired } from "@sendgrid/mail";
+
+sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    const firstName = data.get("first-name") as string;
+    const lastName = data.get("last-name") as string;
+    const subject = data.get("subject") as string
+    const email = data.get("email") as string;
+    const message = data.get("message") as string;
+
+    const msg: MailDataRequired = {
+      to: email,
+      from: "andrei.acevedo1@gmail.com",
+      subject: `${firstName} ${lastName} | ${subject}`,
+      replyTo: { email: email, name: "Andrei Acevedo" },
+      text: message,
+    };
+
+    await sendGrid
+      .send(msg)
+      .then((res) => {
+        alert("Message sent successfully!");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}
+---
+
+<form action="#" method="POST" class="w-full p-16">
+  <div class="mx-auto lg:mr-0">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
+      <div>
+        <label
+          for="first-name"
+          class="block text-sm font-semibold leading-6 text-white">
+          First name
+        </label>
+        <div class="mt-2.5">
+          <input
+            required
+            type="text"
+            name="first-name"
+            id="first-name"
+            autocomplete="given-name"
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6"
+          />          
+        </div>
+      </div>
+      <div>
+        <label
+          for="last-name"
+          class="block text-sm font-semibold leading-6 text-white"
+          >Last name</label
+        >
+        <div class="mt-2.5">
+          <input
+            required
+            type="text"
+            name="last-name"
+            id="last-name"
+            autocomplete="family-name"
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="email"
+          class="block text-sm font-semibold leading-6 text-white">Email</label
+        >
+        <div class="mt-2.5">
+          <input
+            required
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="subject"
+          class="block text-sm font-semibold leading-6 text-white">Subject</label
+        >
+        <div class="mt-2.5">
+          <input
+            required  
+            type="text"
+            name="subject"
+            id="subject"
+            class="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6"
+          />
+        </div>
+      </div>
+      <div class="sm:col-span-2">
+        <label
+          for="message"
+          class="block text-sm font-semibold leading-6 text-white"
+          >Message</label
+        >
+        <div class="mt-2.5">
+          <textarea
+            required
+            name="message"
+            id="message"
+            rows="4"
+            class="block min-h-[120px] w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6" />
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 flex justify-end">
+      <button
+        type="submit"
+        class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 transition ease-in-out duration-100"
+        >Send message</button
+      >
+    </div>
+  </div>
+</form>

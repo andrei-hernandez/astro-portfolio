@@ -3,7 +3,7 @@ import { IProjectDetails } from "@types";
 import { Image } from "astro:assets";
 
 
-const { projectDetail } = Astro.props as IProjectDetails;
+const { projectDetail, className } = Astro.props as IProjectDetails;
 const { pathname } = Astro.url
 const { 
   id,
@@ -13,18 +13,15 @@ const {
   githubUrl,
   hasProjectDetails
 } = projectDetail;
-const anchorAttributes = (hasProjectDetails &&  pathname === "/") 
-? { href: `/projects/${id}` } 
-: { href: liveUrl || githubUrl, target: "_blank" };
 ---
 
-<article class="w-full max-h-[25rem] overflow-hidden relative group">
-  <div class="flex items-center absolute right-4 top-4 z-10">
+<div class:list={["overflow-hidden relative group", className]}>
+  <div class="flex items-center absolute right-4 top-4 z-1">
     {
       githubUrl && (
         <a
           href={githubUrl}
-          class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md"
+          class="text-white p-3 bg-black/50 hover:bg-black/40 transition ease-in-out duration-150 rounded-full backdrop-blur-md"
           aria-label="Social Media"
           target="_blank"
         >
@@ -50,7 +47,7 @@ const anchorAttributes = (hasProjectDetails &&  pathname === "/")
       liveUrl && (
         <a
           href={liveUrl}
-          class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1"
+          class="text-white p-3 bg-black/50 hover:bg-black/40 transition ease-in-out duration-150 rounded-full backdrop-blur-md ml-1"
           aria-label="Social Media"
           target="_blank"
         >
@@ -73,20 +70,20 @@ const anchorAttributes = (hasProjectDetails &&  pathname === "/")
       )
     }
   </div>
-  <a { ...anchorAttributes }>
+  <div>
     <Image
       src={thumbnail}
-      class="w-full h-auto aspect-video scale-100 hover:scale-110 transition duration-[1.5s] object-cover"      
+      class="w-full h-auto aspect-video transition duration-[1.5s] object-cover"      
       height={300}
       loading="eager"
       width={400}      
       alt="featureImage"            
       title={title}
     />  
-  </a>
+  </div>
   <div
     class="absolute w-full bottom-0 left-0 backdrop-blur-md dark:text-white text-white bg-black/50 p-4 translate-y-[100%] group-hover:translate-y-0 transition duration-700"
   >
-    <h3 class="mr-2 text-xl">{title}</h3>
+    <h3 class="mr-2 w-full text-xl">{title}</h3>
   </div>
-</article>
+</div>

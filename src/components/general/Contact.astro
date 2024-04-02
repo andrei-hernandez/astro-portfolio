@@ -1,0 +1,40 @@
+---
+import ContactCard from "./ContactCard.astro";
+import ContactForm from "./ContactForm.astro";
+import SocialMediaStack from "./SocialMediaStack.astro";
+---
+
+<section id="contact" class="mb-16">
+  <article class="flex flex-col items-center">
+    <h2 class="my-16">CONTACT ME</h2>
+    <div class="dark:text-light w-full flex gap-12 flex-row justify-between">
+      <div class="w-[40%] flex flex-col gap-4">
+        <ContactCard
+          label="You can email me here"
+          content="andrei.acevedo1@gmail.com"
+          href="mailto:andrei.acevedo1@gmail.com"
+        />
+        <ContactCard
+          label="You can call me here"
+          content="+52 (722) 535-6533"
+          href="tel:+527225356533"
+        />
+        <div class="mt-4">
+          <h2>My social profiles</h2>
+          <div class="xl:w-[45%] mt-3">
+            <SocialMediaStack />
+          </div>
+        </div>
+      </div>
+      <div class="w-[60%] ring-2 ring-inset flex flex-row gap-4 ring-gray-400/20 rounded-[0.60rem]">
+        <ContactForm />
+      </div>
+    </div>
+  </article>
+</section>
+
+<style>
+  p {
+    @apply dark:text-light;
+  }
+</style>

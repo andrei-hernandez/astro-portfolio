@@ -4,7 +4,7 @@ import { createLogo } from "@utils";
 ---
 
 <header
-  class="container flex items-center justify-between h-[80px] sm:h-[123px]"
+  class="container z-10 bg-dark flex items-center justify-between h-[80px] sm:h-[123px] sticky top-0"
 >
   <a
     class="text-2xl dark:text-light font-semibold dark:font-semibold font-outfit"
@@ -12,25 +12,36 @@ import { createLogo } from "@utils";
     >{createLogo(info.name)}.
   </a>
   <nav>
-    <ul class="flex items-center">
+    <ul class="flex items-center">     
       <li>
-        <a transition:name="project-detail" class="p-4 dark:text-light block text-lg" href="/projects"
+        <a class="nav-anchor" href="#about">
+          About
+        </a>
+      </li>
+      <li>
+        <a class="nav-anchor" href="#projects"
           >Projects</a
         >
       </li>
-      <!-- <li>
-        <a class="p-4 dark:text-light block text-lg" href="/contact">Contact</a>
-      </li> -->
-<!--       <li>
-        <button
-          aria-label="theme-button"
-          id="theme-button"
-          class="dark:text-light rounded-lg p-4 ml-2 bg-slate-100 dark:bg-[#202020]"
-        ></button>
-      </li> -->
+      <li>
+        <a class="nav-anchor" href="#tech-stack">
+          Tech Stack
+        </a>
+      </li>
+      <li>
+        <a class="nav-anchor" href="#contact">
+          Contact
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
+
+<style>
+  .nav-anchor {
+    @apply p-4 dark:text-light block text-lg
+  }
+</style>
 
 <!-- <script is:inline>
   const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
