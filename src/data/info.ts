@@ -35,7 +35,7 @@ export const info = {
       },
       {
         name: "NodeJS",
-        icon: "https://png2.cleanpng.com/sh/f559b489de4345e6fa7a0951ec21ecb1/L0KzQYm3VMI2N5d1j5H0aYP2gLBuTf5wbJYyguU2anH5ccTqkvlxfF58fdQ2YYDzfLrqggRqd58yfep5cnX2g37xk71kd551RadqZUDpSIXsVfU4PWQ8RqI9NkS8RIaBUcUzPGcAS6ICMEO7Roq1kP5o/kisspng-node-js-javascript-web-application-express-js-comp-5ae0f84e5e7537.0464945815246930703869.png",
+        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
       },
       {
         name: "NestJS",
