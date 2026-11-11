@@ -1,11 +1,14 @@
 ---
 import { IHeroProps } from "@types";
+import { useTranslations } from "@i18n";
+const t = useTranslations(Astro.currentLocale);
+
 
 const { name, about } = Astro.props as IHeroProps;
 ---
 
 <section id="about">
-  <p class="dark:text-light md:mt-8">Hey, I’m</p>
+  <p class="dark:text-light md:mt-8">{t("hero.greeting")}</p>
   <h1 class="text-6xl main-heading">{name}</h1>
   <p class="dark:text-light text-lg mb-16">
     {about}

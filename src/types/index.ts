@@ -30,7 +30,6 @@ export interface IProject {
   liveUrl: string;
   techStack: string[];
   description: string;
-  hasProjectDetails: boolean
 }
 export interface IProjects {
   projects: IProject[];

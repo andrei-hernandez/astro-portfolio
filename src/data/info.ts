@@ -1,21 +1,15 @@
 export const info = {
-  baseUrl: "https://portfolio-tawny-iota.vercel.app",
   name: "Andrei Hernandez",
-  jobDescription: "Frontend Developer",
-  about: `I'm a software engineer based in Mexico.
-   I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between.
-   I have been working for 4 years, with a demonstrated history of working in the Computer Software industry. Skilled in Front-end Development.
-   I have  years of experience in HTML, CSS, SCSS, JavaScript, Bootstrap, tailwind CSS, StyledComponent, React JS and Next JS. Hence,
-   I have successfully completed several web projects from scratch. 
-   Yet, I learn continuously and never stop exploring new technologies.
-   So, I have also gained knowledge of Node JS, Nest JS, Express JS, Mongo DB,
-   firebase and React Native with time.
+  about: `I'm a software engineer based in Toluca, Mexico, specializing in front-end development, with over six years of experience building web applications.
+   Today I'm a Staff Software Engineer at Contrast Security, where I build the Northstar platform UI: micro frontends for agent management, access control, policies and CVE Shield, plus the shared design system they're built on.
+   I work mostly with TypeScript, React, Next.js, GraphQL and Tailwind CSS, and I care about accessibility, testing and clear documentation.
+   I keep learning and exploring new technologies, including Node.js, NestJS, Astro, Svelte and React Native.
   `,
   techStack: {
     frameworks: [
       {
         name: "ReactJS",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+        icon: "/assets/icons/wikimedia-react-icon.svg",
       },
       {
         name: "NextJS",
@@ -23,131 +17,131 @@ export const info = {
       },
       {
         name: "JavaScript",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+        icon: "/assets/icons/wikimedia-javascript-logo.png",
       },
       {
         name: "TypeScript",
-        icon: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+        icon: "/assets/icons/devicon-typescript-original.svg",
       },
       {
         name: "HTML5",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg",
+        icon: "/assets/icons/wikimedia-html5-logo-and-wordmark.svg",
       },
       {
         name: "NodeJS",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+        icon: "/assets/icons/wikimedia-node.js-logo.svg",
       },
       {
         name: "NestJS",
-        icon: "https://cdn.worldvectorlogo.com/logos/nestjs.svg",
+        icon: "/assets/icons/worldvectorlogo-nestjs.svg",
       },
       {
         name: "React Native",
-        icon: "https://reactnative.dev/img/favicon.ico",
+        icon: "/assets/icons/devicon-react-original.svg",
       },
       {
         name: "Svelte/SvelteKit",
-        icon: "https://svelte.dev/favicon.png",
+        icon: "/assets/icons/svelte-favicon.png",
       },
       {
         name: "Vue",
-        icon: "https://vuejs.org/logo.svg",
+        icon: "/assets/icons/vuejs-logo.svg",
       },
       {
         name: "NuxtJS",
-        icon: "https://nuxt.com/icon.png",
+        icon: "/assets/icons/nuxt-icon.png",
       },
       {
         name: "IonicJS",
-        icon: "https://static-00.iconduck.com/assets.00/ionic-icon-512x512-6wc44jjr.png",
+        icon: "/assets/icons/devicon-ionic-original.svg",
       },
       {
         name: "Astro",
-        icon: "https://astro.build/assets/press/astro-icon-light-gradient.svg"
+        icon: "/assets/icons/astro-astro-icon-light-gradient.svg"
       },
     ],
     css: [
       {
         name: "CSS3",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg",
+        icon: "/assets/icons/wikimedia-css3-logo-and-wordmark.svg",
       },
       {
         name: "SASS",
-        icon: "https://sass-lang.com/assets/img/logos/logo.svg",
+        icon: "/assets/icons/sass-lang-logo.svg",
       },
       {
         name: "Bootstrap",
-        icon: "https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-social-logo.png",
+        icon: "/assets/icons/getbootstrap-bootstrap-social-logo.png",
       },
       {
         name: "AntDesign",
-        icon: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+        icon: "/assets/icons/alipayobjects-kdpgvgumpgfqahpjicrk.svg",
       },
       {
         name: "Styled Components",
-        icon: "https://styled-components.com/logo.png",
+        icon: "/assets/icons/styled-components-logo.png",
       },
       {
         name: "Tailwind",
-        icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
+        icon: "/assets/icons/devicon-tailwindcss-original.svg",
       }
     ],
     other: [
       {
         name: "GraphQL",
-        icon: "https://graphql.org/img/logo.svg",
+        icon: "/assets/icons/graphql-logo.svg",
       },
       {
         name: "Apollo GraphQL",
-        icon: "https://www.apollographql.com/assets/logos/apollo-symbol-regolith.svg",
+        icon: "/assets/icons/apollographql-apollo-symbol-regolith.svg",
       },
       {
         name: "Tanstack Query",
-        icon: "https://seeklogo.com/images/R/react-query-logo-1340EA4CE9-seeklogo.com.png",
+        icon: "/assets/icons/seeklogo-react-query-logo-1340ea4ce9-seeklogo.com.png",
       },
       {
         name: "Webpack Module Federation",
-        icon: "https://webpack.js.org/icon-square-small-slack.1c7f4f7a52c41f94.png",
+        icon: "/assets/icons/webpack-icon-square-small-slack.1c7f4f7a52c41f94.png",
       },
       {
         name: "Prisma",
-        icon: "https://i.pinimg.com/originals/39/b2/e4/39b2e4ad77c23a2c11e5950a7dfa2aec.png",
+        icon: "/assets/icons/pinimg-39b2e4ad77c23a2c11e5950a7dfa2aec.png",
       },
       {
         name: "Docker",
-        icon: "https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png",
+        icon: "/assets/icons/iconfinder-97-docker-logo-logos-512.png",
       }
     ],
     databases: [
       {
         name: "MongoDB",
-        icon: "https://www.svgrepo.com/show/331488/mongodb.svg",
+        icon: "/assets/icons/devicon-mongodb-original.svg",
       },
       {
         name: "MySQL",
-        icon: "https://www.mysql.com/common/logos/logo-mysql-170x115.png",
+        icon: "/assets/icons/devicon-mysql-original.svg",
       },
       {
         name: "PostgreSQL",
-        icon: "https://www.postgresql.org/media/img/about/press/elephant.png",
+        icon: "/assets/icons/postgresql-elephant.png",
       },
       {
         name: "DynamoDB",
-        icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/DynamoDB.png/120px-DynamoDB.png",
+        icon: "/assets/icons/wikimedia-120px-dynamodb.png",
       },
       {
         name: "Firestore",
-        icon: "https://www.svgrepo.com/show/375433/firestore.svg",
+        icon: "/assets/icons/devicon-firebase-plain.svg",
       },
     ],
     cloud: [
       {
         name: "AWS",
-        icon: "https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35.png",
+        icon: "/assets/icons/awsstatic-aws-smile-header-desktop-en-white-59x35.png",
       },
       {
         name: "GCP",
-        icon: "https://www.gend.co/hs-fs/hubfs/gcp-logo-cloud.png?width=730&name=gcp-logo-cloud.png",
+        icon: "/assets/icons/devicon-googlecloud-original.svg",
       },
       {
         name: "Vercel",
@@ -155,58 +149,76 @@ export const info = {
       },
       {
         name: "DigitalOcean",
-        icon: "https://cdn.worldvectorlogo.com/logos/digitalocean-icon-1.svg",
+        icon: "/assets/icons/worldvectorlogo-digitalocean-icon-1.svg",
       },
       {
         name: "Firebase",
-        icon: "https://www.svgrepo.com/show/353735/firebase.svg",
+        icon: "/assets/icons/devicon-firebase-original.svg",
       },
     ],
     testing: [
       {
         name: "Jest",
-        icon: "https://cdn.freebiesupply.com/logos/large/2x/jest-logo-png-transparent.png",
+        icon: "/assets/icons/freebiesupply-jest-logo-png-transparent.png",
       },
       {
         name: "Vitest",
-        icon: "https://vitejs.dev/logo.svg",
+        icon: "/assets/icons/vitejs-logo.svg",
       },
       {
         name: "Testing Library",
-        icon: "https://testing-library.com/img/logo-large.png",
+        icon: "/assets/icons/testing-library-logo-large.png",
       },
       {
         name: "Playwright",
-        icon: "https://playwright.dev/img/playwright-logo.svg",
+        icon: "/assets/icons/playwright-playwright-logo.svg",
       },
       {
         name: "Cypress",
-        icon: "https://www.svgrepo.com/show/353630/cypress.svg",
+        icon: "/assets/icons/devicon-cypressio-original.svg",
       }
     ],
   },
   experience: [
     {
-      name: "Software Engineer",
+      name: "Staff Software Engineer",
       location: "Contrast Security",
-      startDate: "Feb 2023",
-      endDate: "Sep 2023",
+      startDate: "Jun 2024",
+      endDate: "Present",
       description: [
-        "- Improved developing time and workflows working on MFE's across the product.",
-        "- Contributing to frontend architecture, translations, and accessibility",
-        "- Relevant skills: ReactJS, GraphQL, React, Query, Webpack Module Federation, Playwright"
+        "- Northstar UI: contributed to the company-wide platform redesign, rebuilding core UI modules to centralize access to key security workflows.",
+        "- Agent Management & Agent Wizard: built the dashboard for monitoring and managing Contrast agents across environments, and the guided wizard that walks teams through installing Flex, language and Kubernetes Operator agents.",
+        "- Access Control: led the role-based access control micro frontends (users, groups, roles and view permissions) that decide who can see and change what across the platform.",
+        "- CVE Shield: contributed to the UI for Contrast's runtime protection that blocks exploitation of known CVEs, such as Log4Shell and Spring4Shell, in production applications.",
+        "- Policies: worked on the screens where security teams define and manage the rules and policies applied to their applications.",
+        "- Design system: contributed shared components, reference implementations and documentation so teams could build consistent micro frontends quickly.",
+        "- Tooling & quality: upgraded the front-end toolchain (Yarn 1.22 → 4.9, ESLint 8 → 9) with backward compatibility, and optimized E2E workflows, cutting execution time ~20% and raising test coverage ~15%.",
+        "- Relevant skills: React, TypeScript, GraphQL, TanStack Query, Webpack Module Federation, Playwright",
       ],
     },
     {
-      name: "Testing Engineer",
-      location: "IWA Consolti",
-      startDate: "Nov 2022",
-      endDate: "Sep 2023",
+      name: "Software Engineer",
+      location: "Rotoplas",
+      startDate: "Nov 2023",
+      endDate: "Jun 2024",
       description: [
-        "- Improved CI & CD workflows.",
-        "- Improved testing on the UI.",
-        "- Contributing to the code standards and technical documentation.",
-        "- Relevant skills: ReactJS, Playwright, Jest, Testing Library",
+        "- Rebuilt the Tuboplus app with React Native as a PWA and responsive web app, extending support to older devices.",
+        "- Built an FAQ-style chatbot that guides users to the information they need.",
+        "- Applied responsive design to improve the experience across platforms and device types.",
+        "- Relevant skills: React Native, React, PWA, TypeScript",
+      ],
+    },
+    {
+      name: "Software Engineer & Testing Engineer",
+      location: "Iwaconsolti (for Contrast Security)",
+      startDate: "Nov 2022",
+      endDate: "Oct 2023",
+      description: [
+        "- Worked on the Contrast Security dashboard: accessibility, testing, internationalization and the UX process.",
+        "- Integrated a new micro frontend for the role-based access control (RBAC) system.",
+        "- Reached 100% translation coverage and increased WCAG compliance by 30%.",
+        "- Kept UI test coverage at 95% and reduced defects by 15% through code reviews.",
+        "- Relevant skills: React, GraphQL, Webpack Module Federation, Playwright, Jest, Testing Library",
       ],
     },
     {
@@ -215,48 +227,24 @@ export const info = {
       startDate: "Aug 2021",
       endDate: "Nov 2022",
       description: [
-        "- Contributing to multiple projects in different areas of the industry",
-        "- Leading developing teams approaching the developers to the best performance and working culture",
-        "- Contributing to the code standards and technical documentation",
-        "- Relevant Skills: ReactJS, NextJS, Apollo GraphQL, NodeJS, TypeORM, AntDesign, Firebase, AWS"
+        "- Contributed to multiple projects across different industries.",
+        "- Optimized rendering and API responses, improving user experience by 20%.",
+        "- Built data visualizations, CSV/XLSX ingestion and pipelines feeding machine learning models.",
+        "- Supported the team as a go-to helper and kept code standards and documentation high.",
+        "- Relevant skills: React, Next.js, Apollo GraphQL, Node.js, TypeORM, Ant Design, Firebase, AWS",
       ],
     },
     {
       name: "Software Engineer & Frontend Architect",
       location: "Devany",
       startDate: "May 2020",
-      endDate: "Present",
+      endDate: "Aug 2021",
       description: [
-        "- Approaching the software to the best quality, performance, usability, reliability, and scalability",
-        "- Applying and continues improving CI & CD workflows",
-        "- Relevant Skills: ReactJS, NestJS, Selte, SvelteKit, IonicJS, GraphQL, NestJS, Prisma, Firebase, AntDesign, Tailwind, Vue, NuxtJS, Jest, Testing, Library"
+        "- Built back-office applications and dashboards for small companies.",
+        "- Led and mentored trainee developers, enforcing coding standards and architecture best practices.",
+        "- Optimized CI/CD pipelines and improved rendering and API performance by 20%.",
+        "- Relevant skills: React, NestJS, Svelte, SvelteKit, Ionic, GraphQL, Prisma, Firebase, Ant Design, Tailwind, Vue, Nuxt, Jest, Testing Library",
       ],
-    },
-  ],
-
-  education: [
-    {
-      name: "Pakistan Institute of Professional Science & Technology (PIPS-TECH)",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2019",
-      endDate: "2022",
-      description: [
-        "Diploma of Associate Engineering,  Computer Information Technology (CIT)",
-      ],
-    },
-    {
-      name: "Govt. Degree Boys College Buffer Zone",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2018",
-      endDate: "2020",
-      description: ["Intermediate, Pre-Engineering"],
-    },
-    {
-      name: "Ghazi Foundation Schools & Colleges",
-      location: "Karāchi, Sindh, Pakistan",
-      startDate: "2016",
-      endDate: "2018",
-      description: ["Matriculation,  Computer Science"],
     },
   ],
 
@@ -276,7 +264,6 @@ export const info = {
       liveUrl: "https://nexjs-dashboard-pink.vercel.app/",
       techStack: ["TypeScript", "NextJS", "Vercel", "Tailwind"],
       description: "It's a demo application created by the Next.js team to showcase the latest features of Next.js 14. It serves as a practical reference for developers, demonstrating how to implement these new functionalities in real-world projects. The dashboard provides user authentication, customer management, invoice assignment, and a summary display. It's based on the official Next.js 14 tutorial and was created by Vercel. Developers can explore the code to gain insights into building similar applications using Next.js! ",
-      hasProjectDetails: false,
     },
     {
       id: 2,
@@ -287,40 +274,34 @@ export const info = {
       liveUrl: "https://seach-app.vercel.app/",
       techStack: ["TypeScript", "NextJS", "Firebase", "Algolia", "Vercel", "Tailwind"],
       description: "Its a compilation of practical examples demonstrating various indexed search technologies. It currently features an Algolia example, showcasing its lightning-fast search capabilities and user-friendly APIs. In the pipeline, you’ll find upcoming additions like OpenSearch (an open-source, self-hosted search engine built on Elasticsearch) and Elasticsearch itself. These examples highlight the precision, scalability, customization, and performance benefits of indexed search engines. As you expand this project, consider exploring hybrid solutions and integrating machine learning for smarter search results.",
-      hasProjectDetails: true,
     }
   ],
 };
 
 export const techIcons = {
   NextJS: {
-    icon: "https://nextjs.org/favicon.ico",
-    url: "https://nextjs.org/",
-    color: "gray-400/20"
+    icon: "/assets/icons/nextjs-favicon.ico",
+    url: "https://nextjs.org/"
   },
   TypeScript: {
-    icon: "https://static-00.iconduck.com/assets.00/typescript-icon-icon-1024x1024-vh3pfez8.png",
+    icon: "/assets/icons/devicon-typescript-original.svg",
     url: "https://www.typescriptlang.org/",
   },
   Vercel: {
     icon: "/assets/images/vercel-icon.ico",
-    url: "https://vercel.com/",
-    color: "gray-400/20"
+    url: "https://vercel.com/"
   },
   Tailwind: {
-    icon: "https://static-00.iconduck.com/assets.00/tailwind-css-icon-2048x1229-u8dzt4uh.png",
-    url: "https://tailwindcss.com/",
-    color: "gray-400/20"
+    icon: "/assets/icons/devicon-tailwindcss-original.svg",
+    url: "https://tailwindcss.com/"
   },
   Algolia: {
-    icon: "https://static-00.iconduck.com/assets.00/algolia-icon-256x256-ltt433y8.png",
-    url: "https://www.algolia.com/",
-    color: "gray-400/20"
+    icon: "/assets/icons/devicon-algolia-original.svg",
+    url: "https://www.algolia.com/"
   },
   Firebase: {
-    icon: "https://static-00.iconduck.com/assets.00/firebase-icon-373x512-yunpm6or.png",
-    url: "https://firebase.google.com/",
-    color: "gray-400/20"
+    icon: "/assets/icons/devicon-firebase-original.svg",
+    url: "https://firebase.google.com/"
   },
 };
 

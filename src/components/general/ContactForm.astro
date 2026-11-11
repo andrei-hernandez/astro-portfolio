@@ -1,47 +1,63 @@
 ---
-import sendGrid, { MailDataRequired } from "@sendgrid/mail";
+import { Resend } from "resend";
+import { RESEND_API_KEY } from "astro:env/server";
+import { useTranslations } from "@i18n";
+const t = useTranslations(Astro.currentLocale);
 
-sendGrid.setApiKey(import.meta.env.SENDGRID_API_KEY);
+let status: "sent" | "invalid" | "error" | undefined;
 
 if (Astro.request.method === "POST") {
   try {
     const data = await Astro.request.formData();
-    const firstName = data.get("first-name") as string;
-    const lastName = data.get("last-name") as string;
-    const subject = data.get("subject") as string
-    const email = data.get("email") as string;
-    const message = data.get("message") as string;
+    const field = (name: string) => String(data.get(name) ?? "").trim();
+    const [firstName, lastName, email, subject, message] =
+      ["first-name", "last-name", "email", "subject", "message"].map(field);
 
-    const msg: MailDataRequired = {
-      to: email,
-      from: "andrei.acevedo1@gmail.com",
-      subject: `${firstName} ${lastName} | ${subject}`,
-      replyTo: { email: email, name: "Andrei Acevedo" },
-      text: message,
-    };
-
-    await sendGrid
-      .send(msg)
-      .then((res) => {
-        alert("Message sent successfully!");
-      })
-      .catch((error) => {
-        console.error(error);
+    if (field("website")) {
+      // Honeypot filled in: a bot. Pretend it worked and send nothing.
+      status = "sent";
+    } else if (
+      !firstName || !lastName || !subject || !message ||
+      !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ||
+      [firstName, lastName, subject].some((v) => v.length > 200) ||
+      message.length > 5000
+    ) {
+      status = "invalid";
+    } else {
+      // Always deliver to the site owner; the visitor only goes in replyTo, so the form can't email arbitrary addresses.
+      // shortcut: onboarding@resend.dev only delivers to the Resend account's own email; switch to a verified domain sender if that differs
+      // Created per POST: the constructor throws without a key, which would break plain page views
+      const resend = new Resend(RESEND_API_KEY);
+      const { error } = await resend.emails.send({
+        from: "Portfolio <onboarding@resend.dev>",
+        to: "andrei.acevedo1@gmail.com",
+        subject: `${firstName} ${lastName} | ${subject}`,
+        replyTo: email,
+        text: message,
       });
+      if (error) console.error("Resend error", error);
+      status = error ? "error" : "sent";
+    }
   } catch (error) {
     console.error(error);
+    status = "error";
   }
 }
 ---
 
 <form action="#" method="POST" class="w-full xl:p-16 p-6">
   <div class="mx-auto lg:mr-0">
+    {/* Honeypot: hidden from people and screen readers, bots tend to fill it */}
+    <div aria-hidden="true" class="absolute -left-[9999px]">
+      <label for="website">Website</label>
+      <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
+    </div>
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
       <div>
         <label
           for="first-name"
           class="block text-sm font-semibold leading-6 text-white">
-          First name
+          {t("form.firstName")}
         </label>
         <div class="mt-2.5">
           <input
@@ -58,7 +74,7 @@ if (Astro.request.method === "POST") {
         <label
           for="last-name"
           class="block text-sm font-semibold leading-6 text-white"
-          >Last name</label
+          >{t("form.lastName")}</label
         >
         <div class="mt-2.5">
           <input
@@ -74,7 +90,7 @@ if (Astro.request.method === "POST") {
       <div class="sm:col-span-2">
         <label
           for="email"
-          class="block text-sm font-semibold leading-6 text-white">Email</label
+          class="block text-sm font-semibold leading-6 text-white">{t("form.email")}</label
         >
         <div class="mt-2.5">
           <input
@@ -90,7 +106,7 @@ if (Astro.request.method === "POST") {
       <div class="sm:col-span-2">
         <label
           for="subject"
-          class="block text-sm font-semibold leading-6 text-white">Subject</label
+          class="block text-sm font-semibold leading-6 text-white">{t("form.subject")}</label
         >
         <div class="mt-2.5">
           <input
@@ -106,7 +122,7 @@ if (Astro.request.method === "POST") {
         <label
           for="message"
           class="block text-sm font-semibold leading-6 text-white"
-          >Message</label
+          >{t("form.message")}</label
         >
         <div class="mt-2.5">
           <textarea
@@ -114,15 +130,19 @@ if (Astro.request.method === "POST") {
             name="message"
             id="message"
             rows="4"
+            maxlength="5000"
             class="block min-h-[120px] w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white/20 sm:text-sm sm:leading-6" />
         </div>
       </div>
     </div>
+    <p role="status" class:list={["mt-6 text-sm", status === "sent" ? "text-green-400" : "text-red-400"]}>
+      {status && t(`form.${status}`)}
+    </p>
     <div class="mt-8 flex justify-end">
       <button
         type="submit"
         class="rounded-md bg-indigo-500 w-full xl:w-auto px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 transition ease-in-out duration-100"
-        >Send message</button
+        >{t("form.send")}</button
       >
     </div>
   </div>

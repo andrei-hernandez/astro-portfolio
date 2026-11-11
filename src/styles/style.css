@@ -1,12 +1,8 @@
-/* ========== import font source ========== */
-@import "fonts.css";
-
 /* ========== import custom styles ========== */
 @import "custom-styles.css";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@config "../../tailwind.config.cjs";
 
 /* ========== tailwind custom styles ========== */
 @layer components {
@@ -16,9 +12,6 @@
   }
   body {
     @apply bg-light dark:bg-dark;    
-  }
-  .container {
-    @apply max-w-[1112px] mx-auto px-4;
   }
   h1,
   h2,
@@ -39,7 +32,9 @@
   .footer-icons {
     @apply dark:text-light flex items-center border border-dark dark:border-light p-4 rounded-lg justify-center;
   }
-  .ring-gray-400\/20 { 
-    --tw-ring-color: rgb(156 163 175 / 0.2);
-  }
+}
+
+/* unlayered on purpose: v4's built-in `container` utility sits in a higher layer than components and would override max-width */
+.container {
+  @apply max-w-[1112px] mx-auto px-4;
 }

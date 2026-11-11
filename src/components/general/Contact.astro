@@ -2,30 +2,33 @@
 import ContactCard from "./ContactCard.astro";
 import ContactForm from "./ContactForm.astro";
 import SocialMediaStack from "./SocialMediaStack.astro";
+import { useTranslations } from "@i18n";
+const t = useTranslations(Astro.currentLocale);
+
 ---
 
 <section id="contact" class="mb-16">
   <article class="flex flex-col items-center">
-    <h2 class="my-16">CONTACT ME</h2>
+    <h2 class="my-16">{t("contact.title")}</h2>
     <div class="dark:text-light w-full flex gap-12 md:flex-row flex-col justify-between">
       <div class="md:w-[40%] w-full flex flex-col gap-4">
         <ContactCard
-          label="You can email me here"
+          label={t("contact.email")}
           content="andrei.acevedo1@gmail.com"
           href="mailto:andrei.acevedo1@gmail.com"
         />
         <ContactCard
-          label="You can call me here"
+          label={t("contact.call")}
           content="+52 (722) 535-6533"
           href="tel:+527225356533"
         />
         <ContactCard
-          label="You can WhatsApp me here"
+          label={t("contact.whatsapp")}
           content="+52 (722) 535-6533"
           href="https://wa.me/+527225356533"
         />
         <div class="mt-4">
-          <h2>My social profiles</h2>
+          <h2>{t("contact.social")}</h2>
           <div class="lg:w-[60%] w-full mt-3">
             <SocialMediaStack />
           </div>
@@ -39,6 +42,7 @@ import SocialMediaStack from "./SocialMediaStack.astro";
 </section>
 
 <style>
+  @reference "../../styles/style.css";
   p {
     @apply dark:text-light;
   }

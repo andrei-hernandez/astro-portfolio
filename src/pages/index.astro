@@ -1,5 +1,8 @@
 ---
-import { info } from "@data";
+export const prerender = false; // ContactForm handles POST at request time
+import { getInfo, useTranslations } from "@i18n";
+const info = getInfo(Astro.currentLocale);
+const t = useTranslations(Astro.currentLocale);
 
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
@@ -9,19 +12,14 @@ import MetaHead from "@components/general/MetaHead.astro";
 import TechStack from "@components/general/TechStack.astro";
 import Contact from "@components/general/Contact.astro";
 
-const featureProjects = info.projects.reduce((accumulator, project) => {
-  if (accumulator.length < 6 && project.isFeatured) {
-    accumulator.push(project);
-  }
-  return accumulator;
-}, []);
+const featureProjects = info.projects.filter((project) => project.isFeatured).slice(0, 6);
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang={Astro.currentLocale} data-theme="dark">
   <head>    
     <MetaHead 
-      title={"Portfolio"}
+      title={t("home.title")}
       description={info.about}    
     />
   </head>
@@ -29,10 +27,9 @@ const featureProjects = info.projects.reduce((accumulator, project) => {
   <body class="dark:text-light">
     <Layout>
       <Hero name={info.name} about={info.about} />
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      <!-- <Experience title={"EDUCATION"} details={info.education} /> -->
+      <Experience title={t("home.experience")} details={info.experience} />
       <section id="projects" class="dark:text-light">
-        <h2 class="w-[15rem] mt-16">FEATURED PROJECTS</h2>
+        <h2 class="w-[15rem] mt-16">{t("home.featured")}</h2>
         <ProjectsWrapper projects={featureProjects} />
       </section>
       <TechStack stack={info.techStack}/>

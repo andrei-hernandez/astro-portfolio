@@ -1,67 +1,24 @@
-# Portfolio Website - Astro
+# Andrei Hernandez — Portfolio
 
-Just change `src/data/info.ts` to get your personal portfolio.
+Personal portfolio built with [Astro](https://astro.build) 7 and Tailwind CSS 4, in English (`/`) and Spanish (`/es/`).
 
-## portfolio template for Developers!
+## Develop
 
-![Feature Image](./public/assets/images/astro-portfolio.png)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── assets
-│   │   ├── fonts
-|   |   └── images
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   ├── home/
-|   |   └── general/
-|   |       ├── Header.astro
-|   |       ├── Footer.astro
-|   |       └── ...
-│   ├── data/
-│   ├── layouts/
-│   |   |── Layout.astro
-│   |   └── ...
-│   ├── pages/
-│   |   ├── peojects.astro
-│   |   ├── index.astro
-│   ├── styles/
-│   |   |── custom-styles.css
-│   |   |── fonts.css
-│   |   └── styles.css
-│   ├── types/
-│   ├── utils/
-├── package.json
-└── ...
+```bash
+pnpm install
+pnpm dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Content
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- Profile, experience, projects and tech stack: `src/data/info.ts` (English source of truth)
+- Spanish text and UI labels: `src/i18n/index.ts` — `es.experience` must keep one entry per job, in the same order (the build fails otherwise)
+- Icons: `public/assets/icons/`
 
-Any static assets, like images, can be placed in the `public/assets` directory.
+## Deploy (Railway)
 
-Your personal data would be go on `src/data` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
+- Build: `pnpm build` · Start: `pnpm start` (Node standalone server, listens on `$PORT`)
+- Every page is static except the home pages, which render on request so the contact form can send email.
+- Environment variables:
+  - `RESEND_API_KEY` — read at runtime, used by the contact form
+  - `RAILWAY_PUBLIC_DOMAIN` — set by Railway; becomes the site URL for canonical links, sitemap and the form's origin check

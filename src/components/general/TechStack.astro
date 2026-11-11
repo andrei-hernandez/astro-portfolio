@@ -1,13 +1,16 @@
 ---
 import { Image } from "astro:assets";
+import { useTranslations } from "@i18n";
+const t = useTranslations(Astro.currentLocale);
+
 
 const { stack } = Astro.props;
 ---
 
 <section id="tech-stack" class="dark:text-light flex flex-col justify-center items-center">
-  <h2>TECH STACK</h2>
+  <h2>{t("stack.title")}</h2>
   <article>
-    <h2>Frameworks & Languages</h2>
+    <h2>{t("stack.frameworks")}</h2>
     <div class="tech-grid">
       {
         stack.frameworks.map(({ name, icon }) => (
@@ -19,7 +22,7 @@ const { stack } = Astro.props;
       }
     </div>
   </article>
-  <h2>CSS</h2>
+  <h2>{t("stack.css")}</h2>
   <article>
     <div class="tech-grid">
       {
@@ -33,7 +36,7 @@ const { stack } = Astro.props;
     </div>
   </article>
   <article>
-    <h2>Others</h2>
+    <h2>{t("stack.other")}</h2>
     <div class="tech-grid">
       {
         stack.other.map(({ name, icon }) => (
@@ -46,7 +49,7 @@ const { stack } = Astro.props;
     </div>
   </article>
   <article>
-    <h2>Databases</h2>
+    <h2>{t("stack.databases")}</h2>
     <div class="tech-grid">
       {
         stack.databases.map(({ name, icon }) => (
@@ -59,7 +62,7 @@ const { stack } = Astro.props;
     </div>
   </article>
   <article>
-    <h2>Cloud</h2>
+    <h2>{t("stack.cloud")}</h2>
     <div class="tech-grid">
       {
         stack.cloud.map(({ name, icon }) => (
@@ -72,7 +75,7 @@ const { stack } = Astro.props;
     </div>
   </article>
   <article>
-    <h2>Testing</h2>
+    <h2>{t("stack.testing")}</h2>
     <div class="tech-grid">
       {
         stack.testing.map(({ name, icon }) => (
@@ -87,6 +90,7 @@ const { stack } = Astro.props;
 </section>
 
 <style>
+  @reference "../../styles/style.css";
   .tech-element {
     @apply flex flex-col justify-center items-center h-[270px];
   }

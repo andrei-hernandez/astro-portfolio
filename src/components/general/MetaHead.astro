@@ -1,7 +1,11 @@
 ---
 import { IMetaHead } from "@types";
 import { info } from "@data";
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
+import { Font } from 'astro:assets';
+import { alternatePath } from "@i18n";
+
+const altLang = Astro.currentLocale === "es" ? "en" : "es";
 
 const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 ---
@@ -25,9 +29,11 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 <!-- Primary Meta Tags -->
 {
   title && (
-    <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
+    <link rel="canonical" href={`${new URL(Astro.url.pathname, Astro.site)}`} />
   )
 }
+<link rel="alternate" hreflang={Astro.currentLocale} href={`${new URL(Astro.url.pathname, Astro.site)}`} />
+<link rel="alternate" hreflang={altLang} href={`${new URL(alternatePath(Astro.url.pathname, Astro.currentLocale), Astro.site)}`} />
 {title && <title>{`${title} - ${info.name}`}</title>}
 {title && <meta name="title" content={`${title} - ${info.name}`} />}
 {description && <meta name="description" content={description} />}
@@ -36,14 +42,14 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 {title && <meta property="og:type" content="website" />}
 {
   title && (
-    <meta property="og:url" content={`${info.baseUrl}${Astro.url.pathname}`} />
+    <meta property="og:url" content={`${new URL(Astro.url.pathname, Astro.site)}`} />
   )
 }
 {title && <meta property="og:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="og:description" content={description} />}
 {
   ogImageUrl && (
-    <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
+    <meta property="og:image" content={`${new URL(ogImageUrl, Astro.site)}`} />
   )
 }
 
@@ -53,7 +59,7 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
   title && (
     <meta
       property="twitter:url"
-      content={`${info.baseUrl}${Astro.url.pathname}`}
+      content={`${new URL(Astro.url.pathname, Astro.site)}`}
     />
   )
 }
@@ -61,22 +67,11 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 {description && <meta property="twitter:description" content={description} />}
 {
   ogImageUrl && (
-    <meta property="twitter:image" content={`${info.baseUrl}${ogImageUrl}`} />
+    <meta property="twitter:image" content={`${new URL(ogImageUrl, Astro.site)}`} />
   )
 }
 
-<!-- preload assests -->
-<link
-  rel="preload"
-  href="/assets/fonts/Inter/Inter-Light.ttf"
-  as="font"
-  crossorigin
-/>
-<link
-  rel="preload"
-  href="/assets/fonts/Outfit/Outfit-SemiBold.ttf"
-  as="font"
-  crossorigin
-/>
+<Font cssVariable="--font-inter" preload={[{ weight: 400 }]} />
+<Font cssVariable="--font-outfit" preload={[{ weight: 600 }]} />
 
-<ViewTransitions />
+<ClientRouter />

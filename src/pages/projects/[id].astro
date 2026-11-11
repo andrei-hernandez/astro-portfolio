@@ -1,5 +1,8 @@
 ---
-import { info, techIcons } from "@data";
+import { info as baseInfo, techIcons } from "@data";
+import { getInfo, useTranslations } from "@i18n";
+const info = getInfo(Astro.currentLocale);
+const t = useTranslations(Astro.currentLocale);
 
 import type { GetStaticPaths } from "astro";
 import MetaHead from "@components/general/MetaHead.astro";
@@ -11,10 +14,10 @@ const { id } = Astro.params;
 const project = info.projects.find((project) => Number(id) === project.id);
 
 export const getStaticPaths = (() => {
-  return info.projects.map((project) => {
+  return baseInfo.projects.map((project) => {
     return {
       params: {
-        id: project.id
+        id: String(project.id)
       }
     }
   })
@@ -22,11 +25,11 @@ export const getStaticPaths = (() => {
 ---
 
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang={Astro.currentLocale} data-theme="dark">
   <head>
     <MetaHead
       title={project?.title}
-      description={"All projects are available in this page."}
+      description={project.description}
     />
   </head>
 
@@ -40,7 +43,7 @@ export const getStaticPaths = (() => {
       <p class="dark:text-light text-lg mb-16 mt-12">
         {project.description}
       </p>
-      <h2 class="mb-2">Tech Stack</h2>
+      <h2 class="mb-2">{t("project.techStack")}</h2>
       <div class="flex items-start flex-row w-auto h-10 gap-1 mb-16">        
         {project.techStack.map((tech) => (          
           <a href={techIcons[tech].url} aria-label={tech} target="_blank">
@@ -51,7 +54,7 @@ export const getStaticPaths = (() => {
             class="fill-white object-contain h-[40px] w-[40px] mx-1 logo" 
             src={techIcons[tech].icon} />
           </a>          
-        ))
+        ))}
       </div>
       </section>
     </Layout>

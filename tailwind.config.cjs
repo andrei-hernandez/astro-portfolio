@@ -13,8 +13,8 @@ module.exports = {
         "gray-400/20": "#2d2f31"
       },
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
-        outfit: ["Outfit", "sans-serif"],
+        inter: ["var(--font-inter)"],
+        outfit: ["var(--font-outfit)"],
       },
     },
   },

@@ -1,0 +1,9 @@
+---
+import Page from "../../projects/[id].astro";
+import { info } from "@data";
+
+export const getStaticPaths = () =>
+  info.projects.map((project) => ({ params: { id: String(project.id) } }));
+---
+
+<Page />
